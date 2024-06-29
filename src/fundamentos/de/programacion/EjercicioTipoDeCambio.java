@@ -11,26 +11,31 @@ public class EjercicioTipoDeCambio {
     public static void main(String[] args) {
         
         float suma = 0, promedio;
-        
         float tipoDeCambio=0;
         
+        float mayor=0;
+        int CANTIDAD_DE_DIAS = 5;
+        
          Scanner scanner = new Scanner(System.in);
-         
-         
-         for(int  i = 0; i<5; i++){
+        
+         for(int  i = 0; i<CANTIDAD_DE_DIAS; i++){
              
              System.out.println("Ingrese tipo de cambio del día "+i+": ");
              tipoDeCambio = scanner.nextFloat();
              System.out.println("El tipo de cambio ingresado es: "+tipoDeCambio);
              
+             if(tipoDeCambio>mayor){
+                 mayor = tipoDeCambio;
+             }
+             
              suma = suma + tipoDeCambio;
             
          }
          
-         System.out.println("La suma es: "+suma);
-         promedio = suma / 5;
+         promedio = suma / CANTIDAD_DE_DIAS;
          
          System.out.println("El promedio es: "+promedio);
+         System.out.println("El mayor es: "+mayor);
          
           
     }
