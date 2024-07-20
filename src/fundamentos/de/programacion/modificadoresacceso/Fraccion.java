@@ -48,7 +48,46 @@ package fundamentos.de.programacion.modificadoresacceso;
     
         public void simplificar(){
       
+            int limite, mcd=1;
+            
+            if(denominador<numerador){
+                limite = denominador;
+            }
+            else{
+                limite = numerador;
+            }
+            
+            for(int i = 1; i<=limite; i++){
+                
+                if(numerador%i==0 && denominador%i==0){
+                    mcd = i;
+                }
+            }
          
+            this.numerador = this.numerador/mcd;
+            
+            this.denominador/=mcd;
+           
     }
+        
+        
+        public void simplificarEuclides(){
+            int mcd = calcularMCD(numerador, denominador);
+            
+            this.numerador/=mcd;
+            this.denominador/=mcd;
+            
+        }
+        
+        private int calcularMCD(int a, int b){
+         
+            while(b != 0){
+                int temp = b;
+                b = a%b;
+                a=temp;
+            }
+            return a;
+        }
+        
     
 }

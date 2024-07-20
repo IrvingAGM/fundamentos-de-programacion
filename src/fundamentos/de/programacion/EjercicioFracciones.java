@@ -25,11 +25,15 @@ public class EjercicioFracciones {
         System.out.println(f1.getEquivalenteDecimal());
         
         Fraccion f2 = new Fraccion();
-        f2.setNumerador(6);
-        f2.setDenominador(8);
+        f2.setNumerador(45);
+        f2.setDenominador(60);
         
         f2.imprimir();
         
-        f2.simplificar();
+       // f2.simplificar();
+        f2.simplificarEuclides();
+        f2.imprimir();
+        
+        
     }
 }
