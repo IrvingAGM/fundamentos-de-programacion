@@ -16,7 +16,7 @@ public class EjercicioOperacionesFracciones {
     
     public static void main(String[] args) {
         
-        OperacionesFracciones operacionesFracciones = new OperacionesFracciones();
+        OperacionesFracciones opf = new OperacionesFracciones();
         
         Scanner scanner = new Scanner(System.in);
         
@@ -44,7 +44,7 @@ public class EjercicioOperacionesFracciones {
             
             
              switch(opcion){
-                 case 1: Fraccion resultado = operacionesFracciones.suma(f1, f2);
+                 case 1: Fraccion resultado = opf.suma(f2, f1);
                              System.out.println("El resultado es: " );
                              resultado.imprimir();
                              break;

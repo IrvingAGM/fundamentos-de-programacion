@@ -10,13 +10,15 @@ package fundamentos.de.programacion.modificadoresacceso;
  */
 public class OperacionesFracciones {
     
-    public Fraccion suma(Fraccion f1, Fraccion f2){
+    public Fraccion suma(Fraccion sumando1, Fraccion sumando2){
         
         Fraccion fraccionResultante = new Fraccion();
         
         //Falta hacer la operacion
-        fraccionResultante.setNumerador(1);
-        fraccionResultante.setDenominador(2);
+        fraccionResultante.setDenominador( sumando1.getDenominador()*sumando2.getDenominador());
+     
+        fraccionResultante.setNumerador(sumando1.getNumerador()*sumando2.getDenominador()
+                +sumando1.getDenominador()*sumando2.getNumerador());
         
         return fraccionResultante;
         
